@@ -1,0 +1,13 @@
+---
+---
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*:focus, *:active {
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+}
