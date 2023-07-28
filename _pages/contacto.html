@@ -6,8 +6,94 @@ permalink: /contacto
 
 <div class="w-full flex -z-10 justify-center">
     <div class="basis-full sm:basis-4/5 xl:basis-2/3 px-6 pt-8 md:p-10 pb-24 sm:pb-10 2xl:px-20 m-auto w-full">
-        <h1 class="text-3xl sm:text-4xl w-full mb-6 sm:mb-10 font-sans2 font-semibold">Contacto</h1>
+        <h1 class="text-3xl sm:text-4xl w-full mb-6 sm:mb-10 font-sans2">
+            <span class="font-semibold">Contacto</span>
+        </h1>
             
-        <p class="mb-4 lg:mb-6">En construcción 🚧</p>
+        <p class="mb-4 lg:mb-6">Si quieres, déjame un mensaje y trataré de responderte en cuanto sea posible.</p>
+     
+        <form id="contacto" action="#enviando" class="space-y-4" method="POST">
+            <div>
+                <input type="text" name="nombre" class="border border-solid border-gray-300 bg-gray-800 focus:bg-gray-700 text-gray-100 text-sm rounded-lg block w-full p-3" placeholder="Nombre" required>
+            </div>
+            <div>
+                <input type="email" name="email" class="border border-solid border-gray-300 bg-gray-800 focus:bg-gray-700 text-gray-100 text-sm rounded-lg block w-full p-3" placeholder="Correo electrónico" required>
+            </div>
+            <div>
+                <textarea name="mensaje" class="h-24 md:h-32 resize-none border border-solid border-gray-300 bg-gray-800 focus:bg-gray-700 text-gray-100 text-sm rounded-lg block w-full p-3" placeholder="Tu mensaje..." required></textarea>
+            </div>
+            <button id="enviar" type="submit" class="border border-solid border-white bg-white text-gray-800 hover:bg-gray-200 hover:border-gray-200 py-2 px-4 rounded-lg mr-5 disabled:cursor-wait">
+                <span class="material-icons align-text-bottom text-[1.3rem]">&#xe163;</span> Enviar
+            </button>
+            <p id="ok" class="hidden target:block sm:target:inline-block sm:ml-4 text-green-300"><span class="material-icons align-text-bottom text-[1.3rem]">&#xe876;</span> Mensaje enviado correctamente.</p>
+            <p id="error" class="hidden target:block sm:target:inline-block sm:ml-4 text-red-300"><span class="material-icons align-text-bottom text-[1.3rem]">&#xe000;</span> Error al enviar, puedes probar contactarme por <a href="https://www.linkedin.com/in/bcgrillo" target="_blank" class="underline decoration-dotted">Linkedin</a>.</p>
+        </form>
+
+        <p class="text-xs mt-4 lg:mt-6 text-gray-600 italic mb-4 lg:mb-6">Powered by <a href="https://getform.io" target="_blank">getform.io</a></p>
+
+        <p class="text-center sm:text-left">
+            <a class="text-white hover:bg-gray-700 rounded-full inline-block" href="/">
+                <svg version="1.1" width="32" height="32" viewBox="0 0 20 20" fill="white">
+                <g stroke="#ffffff" stroke-width="2.23">
+                    <path d="m1.7319 9.9956c2e-5 0.75604 0.09966 1.4842 0.2989 2.1846 0.19929 0.70036 0.47768 1.3582 0.83516 1.9736 0.35753 0.61537 0.78683 1.1751 1.2879 1.6791 0.50112 0.50402 1.0579 0.93625 1.6703 1.2967 0.61247 0.36043 1.2703 0.64028 1.9736 0.83956 0.70331 0.19925 1.433 0.29889 2.189 0.2989 0.75606-1.5e-5 1.4843-0.09965 2.1846-0.2989 0.70038-0.19928 1.3553-0.47914 1.9648-0.83956 0.60953-0.36045 1.1678-0.79269 1.6747-1.2967 0.50696-0.50404 0.94066-1.0637 1.3011-1.6791 0.36044-0.6154 0.64176-1.2733 0.84396-1.9736 0.2022-0.70037 0.3033-1.4286 0.3033-2.1846 4e-6 -0.75605-0.09963-1.4843-0.2989-2.1846-0.19926-0.70037-0.47912-1.3568-0.83956-1.9692-0.36044-0.61245-0.79267-1.1692-1.2967-1.6703-0.50402-0.5011-1.0637-0.93187-1.6791-1.2923-0.61538-0.36044-1.2733-0.64029-1.9736-0.83956-0.70036-0.19926-1.4286-0.2989-2.1846-0.2989-0.75603 1e-6 -1.4857 0.09964-2.189 0.2989-0.70328 0.19927-1.3612 0.47766-1.9736 0.83516-0.61244 0.35751-1.1692 0.78681-1.6703 1.2879-0.50108 0.5011-0.93038 1.0593-1.2879 1.6747-0.35749 0.61538-0.63588 1.2733-0.83516 1.9736-0.19925 0.70036-0.29888 1.4286-0.2989 2.1846zm2.7692 0.035172v-0.035172l4.0264-4.211h2.9187l-3.0681 3.1385h6.6725v2.1802h-6.6725l3.0681 3.1385h-2.9187zm-4.5011-0.043964c2.1e-5 -0.90843 0.12017-1.7846 0.36044-2.6286 0.24032-0.84396 0.58024-1.6366 1.0198-2.378 0.43958-0.74139 0.96412-1.4169 1.5736-2.0264 0.60954-0.60952 1.285-1.1341 2.0264-1.5736 0.74141-0.43956 1.5355-0.77948 2.3824-1.0198 0.8469-0.24029 1.7246-0.36044 2.633-0.36044 0.90844 3e-6 1.7861 0.12016 2.633 0.36044 0.8469 0.2403 1.641 0.57729 2.3824 1.011 0.7414 0.4337 1.4183 0.95531 2.0308 1.5648 0.61246 0.60952 1.1385 1.285 1.578 2.0264 0.43956 0.74139 0.77949 1.5355 1.0198 2.3824 0.2403 0.84688 0.36044 1.7275 0.36044 2.6418 2e-6 0.90842-0.12014 1.7861-0.36044 2.633-0.24029 0.84688-0.58022 1.641-1.0198 2.3824-0.43956 0.74138-0.96556 1.4183-1.578 2.0308-0.61245 0.61244-1.2894 1.1384-2.0308 1.578-0.74138 0.43954-1.5355 0.78094-2.3824 1.0242-0.84688 0.24321-1.7245 0.36482-2.633 0.36484-0.90841-1.6e-5 -1.7861-0.12016-2.633-0.36044-0.84687-0.24031-1.641-0.57877-2.3824-1.0154-0.74137-0.43664-1.4168-0.96119-2.0264-1.5736-0.6095-0.61247-1.134-1.2894-1.5736-2.0308-0.43954-0.7414-0.77946-1.537-1.0198-2.3868-0.24027-0.84982-0.36042-1.7319-0.36044-2.6462z" stroke="none"/>
+                </g>
+                </svg>
+            </a>
+        </p>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                $("[type='submit']").click(function() {
+                    $(this)
+                        .closest("form")
+                        .find("[required]")
+                        .addClass("invalid:border-rose-300 invalid:text-red-500 invalid:focus:border-red-500");
+                });
+             
+                $("#contacto").submit(function(e) {
+                    e.preventDefault();
+                    const formData = new FormData(e.target);
+
+                    $("#enviar").attr("disabled", "");
+                    $("#enviar").html("<span class='material-icons align-text-bottom text-[1.3rem]'>&#xe5d5;</span> Enviando...");
+                    window.location.hash = "#contacto";
+
+                    fetch("https://getform.io/f/8411f4ae-6662-4e9f-8b0b-ca95c96f670d", {
+                        method: "POST", 
+                        body: formData,
+                        headers: {
+                            "Accept": "application/json",
+                        },
+                    })
+                    .then(response => {
+                        if (response.ok) {
+                            window.location.hash = "#ok";
+                            formReset(true);
+                        }
+                        else {
+                            window.location.hash = "#error";
+                            formReset();
+                        }
+                    })
+                    .catch(error => {
+                        console.log(error);
+
+                        window.location.hash = "#error";
+                        formReset();
+                    });
+                });
+            });
+
+            function formReset(cleanup = false) {
+                $("#enviar").removeAttr("disabled");
+                $("#enviar").html("<span class='material-icons align-text-bottom text-[1.3rem]'>&#xe163;</span> Enviar");
+
+                if (cleanup) {
+                    $("#contacto").trigger("reset");
+                    $("#contacto").find("[required]")
+                        .removeClass("invalid:border-rose-300 invalid:text-red-500 invalid:focus:border-red-500");
+                }
+            }
+        </script>
     </div>
 </div>
