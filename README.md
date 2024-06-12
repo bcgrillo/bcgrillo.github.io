@@ -4,7 +4,7 @@ Hello there! 👋 I'm Bruno, an experienced Software Engineer and Development Ma
 
 ## Connect with Me 🌐
 
-- 📧 Email: [bcgrillo@yahoo.com](mailto:bcgrillo@yahoo.com)
+- 📧 Email: [Write me here](https://bcgrillo.github.io/contacto)
 - 🔗 LinkedIn: [Bruno Grillo](https://www.linkedin.com/in/bcgrillo)
 - 🌍 Personal Website: [bcgrillo.github.io](https://bcgrillo.github.io)
 - 📝 Blog: [lanalua.github.io/bcgrillo](https://lanalua.github.io/bcgrillo)
