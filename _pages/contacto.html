@@ -13,6 +13,7 @@ permalink: /contacto
         <p class="mb-4 lg:mb-6">Si quieres, déjame un mensaje y trataré de responderte en cuanto me sea posible.</p>
      
         <form id="contacto" action="#enviando" class="space-y-4" method="POST">
+            <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
             <div>
                 <input type="text" name="nombre" class="border border-solid border-gray-300 bg-gray-800 focus:bg-gray-700 text-gray-100 text-sm rounded-lg block w-full p-3" placeholder="Nombre" required>
             </div>
@@ -22,6 +23,7 @@ permalink: /contacto
             <div>
                 <textarea name="mensaje" class="h-24 md:h-32 resize-none border border-solid border-gray-300 bg-gray-800 focus:bg-gray-700 text-gray-100 text-sm rounded-lg block w-full p-3" placeholder="Tu mensaje..." required></textarea>
             </div>
+            <div class="h-captcha" data-sitekey="a3a841ba-9b64-4c2e-a560-d546b122a900"></div>
             <button id="enviar" type="submit" class="border border-solid border-white bg-white text-gray-800 hover:bg-gray-200 hover:border-gray-200 py-2 px-4 rounded-lg mr-5 disabled:cursor-wait">
                 <span class="material-icons align-text-bottom text-[1.3rem]">&#xe163;</span> Enviar
             </button>
@@ -52,6 +54,13 @@ permalink: /contacto
              
                 $("#contacto").submit(function(e) {
                     e.preventDefault();
+                    
+                    const token = document.querySelector('[name="h-captcha-response"]')?.value;
+                    if (!token) {
+                        alert("Por favor completa el captcha");
+                        return;
+                    }
+
                     const formData = new FormData(e.target);
 
                     $("#enviar").attr("disabled", "");
@@ -92,6 +101,7 @@ permalink: /contacto
                     $("#contacto").trigger("reset");
                     $("#contacto").find("[required]")
                         .removeClass("invalid:border-rose-300 invalid:text-red-500 invalid:focus:border-red-500");
+                    hcaptcha.reset();
                 }
             }
         </script>
